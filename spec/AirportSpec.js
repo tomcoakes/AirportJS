@@ -33,11 +33,26 @@ describe("Airport", function() {
     expect(airport.planes.length).toEqual(0);
   });
 
+  it("has a capacity", function() {
+    var largeAirport = new Airport(20);
+    expect(largeAirport.capacity).toEqual(20);
+  });
+
+  it("knows when it is not full", function() {
+    airport.land(plane);
+    expect(airport.full).toBe(false);
+  });
+
+  it("knows when it is full", function() {
+    var hangar = new Airport(1);
+    hangar.land(plane);
+    expect(hangar.full).toBe(true);
+  });
+
   it("doesn't allow any more than ten planes to land at a time", function() {
     fillAirport();
-    expect(function(){
-      var planeIndex = airport.planes.indexOf(plane);
-      airport.planes.splice(planeIndex, 1);
+    expect(function() {
+      airport.land(plane);
     }).toThrow(new Error("Airport is full"));
   });
 
