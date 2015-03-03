@@ -7,8 +7,6 @@ var Airport = function() {
     this._dock(plane);
   };
 
-
-
   Airport.prototype.takeOff = function(plane) {
     plane.takeOff();
     var planeIndex = this.planes.indexOf(plane);

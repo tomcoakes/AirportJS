@@ -33,5 +33,13 @@ describe("Airport", function() {
     expect(airport.planes.length).toEqual(0);
   });
 
+  it("doesn't allow any more than ten planes to land at a time", function() {
+    fillAirport();
+    expect(function(){
+      var planeIndex = airport.planes.indexOf(plane);
+      airport.planes.splice(planeIndex, 1);
+    }).toThrow(new Error("Airport is full"));
+  });
+
 });
 
