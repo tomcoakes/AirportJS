@@ -23,7 +23,7 @@ Upon refactoring the AirportSpec.js file, I was able to begin nesting describe b
 
 ### Further Refactoring Opportunities
 
-I'm not satisfied with the way that I'm using Chicago Style of TDD, by creating an instance of the weather object rather than a using a spy object. This is because I've had difficulty forcing a return value on a spy object that has already been created and get the message (this method has already been spied upon).
+I'm not satisfied with the way that I used Chicago Style of TDD, by creating an instance of the weather object rather than a using a spy object. This is because I've had difficulty forcing a return value on a spy object that has already been created and get the message (this method has already been spied upon).
 
 ### Takeaway
 
