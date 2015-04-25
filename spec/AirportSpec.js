@@ -2,6 +2,7 @@ describe("Airport", function() {
 
   beforeEach(function() {
     airport = new Airport();
+    weather = new Weather();
     plane = jasmine.createSpyObj("plane", ['land','takeOff']);
   });
 
@@ -54,6 +55,14 @@ describe("Airport", function() {
     expect(function() {
       airport.land(plane);
     }).toThrow(new Error("Airport is full"));
+  });
+
+  it("doesn't let planes land when the weather is stormy", function() {
+    
+    spyOn(weather, 'isStormy').and.returnValue(true);
+    airport.land(plane);
+    expect(airport.planes.length).toEqual(0);
+
   });
 
 });
