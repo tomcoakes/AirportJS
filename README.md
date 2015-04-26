@@ -1,5 +1,6 @@
-[![Code Climate](https://codeclimate.com/github/tomcoakes/AirportJS/badges/gpa.svg)](https://codeclimate.com/github/tomcoakes/AirportJS)
 # AirportJS
+
+[![Code Climate](https://codeclimate.com/github/tomcoakes/AirportJS/badges/gpa.svg)](https://codeclimate.com/github/tomcoakes/AirportJS)
 
 ### Synopsis
 
